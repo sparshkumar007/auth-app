@@ -44,9 +44,7 @@ export async function POST(request:NextRequest){
         response.cookies.set('token',token,{
             httpOnly:true
         })
-
         return response;
-
     } catch (error:any) {
         console.log(error.message);
         toast.error(error.message);

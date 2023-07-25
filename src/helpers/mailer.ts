@@ -33,7 +33,7 @@ export async function sendMail({email,emailType,userId}:any){
         to: email, // list of receivers
         subject: emailType === "VERIFY" ? "Verify Your Email" : "Reset Your Password", // Subject line
         // text: "Hello world?", // plain text body
-        html: `<p> Click <a href="${process.env.DOMAIN}/verifyEmail?token=${hashedToken}">here</a> to ${emailType === "VERIFY" ? "Verify Your Email" : "Reset Your Password"}</p>`, // html body
+        html: `<p> Click <a href="${process.env.DOMAIN}/verifyEmail?token=${hashedToken}">here</a> to ${emailType === "VERIFY" ? "Verify Your Email" : "Reset Your Password"} .or copy this url on browser:<br>${process.env.DOMAIN}/verifyEmail?token=${hashedToken}</p>`, // html body
       };
 
       const response = await transporter.sendMail(mailOptions);

@@ -22,8 +22,8 @@ export default function ProfilePage(){
     }
     const getUserData=async()=>{
         try {
-            const user=await axios.get('/api/users/me');
-            console.log(user.data);
+            const user:any=await axios.get('/api/users/me');
+            console.log(user);
             if(!user){
                 return console.log('failed to access user data');
             }
@@ -31,7 +31,7 @@ export default function ProfilePage(){
             // because user.data has an object we returned from me/router
             // {message:"",data:""}
             // so we now access data._id of this object
-            setData(user.data.data._id);
+            setData(user._id);
         } catch (error:any) {
             console.log(error.message);
         }
