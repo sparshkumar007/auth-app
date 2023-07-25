@@ -5,7 +5,7 @@ import { NextRequest,NextResponse } from "next/server";
 import React, { useEffect, useState } from 'react';
 import {useRouter} from "next/navigation";
 
-export default function verifyEmail(request:NextRequest){
+export default function VerifyEmail(request:NextRequest){
     const Router=useRouter();
     const [token,setToken]=useState("");
     const [verified,setVerified]=useState(false);

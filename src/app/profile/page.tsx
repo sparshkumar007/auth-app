@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
 
-export default function profilePage(){
+export default function ProfilePage(){
     const router=useRouter();
     const [data,setData]=useState('nothing');
     const onLogout=async()=>{

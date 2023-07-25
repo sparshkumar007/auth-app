@@ -9,7 +9,7 @@ import { toast } from "react-hot-toast";
 import { sendMail } from "@/helpers/mailer";
 
 
-export default function signupPage(){
+export default function SignupPage(){
     const router=useRouter();
     const [user,setUser]=useState({
         username:"",
