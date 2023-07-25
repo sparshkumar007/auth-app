@@ -5,7 +5,7 @@ import { NextRequest,NextResponse } from "next/server";
 import React, { useEffect, useState } from 'react';
 import {useRouter} from "next/navigation";
 
-export const VerifyEmail=()=>{
+const VerifyEmail=()=>{
     const Router=useRouter();
     const [token,setToken]=useState("");
     const [verified,setVerified]=useState(false);
@@ -39,3 +39,4 @@ export const VerifyEmail=()=>{
         </h1>
     )
 }
+export default VerifyEmail;
