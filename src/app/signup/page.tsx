@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import  axios  from "axios";
 import { toast } from "react-hot-toast";
+import { sendMail } from "@/helpers/mailer";
 
 
 export default function signupPage(){
