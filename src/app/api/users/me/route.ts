@@ -18,5 +18,6 @@ export async function GET(request:NextRequest){
         return NextResponse.json(recievedData);
     } catch (error:any) {
         console.log(error.message);
+        return NextResponse.json(error.message);
     }
 }
