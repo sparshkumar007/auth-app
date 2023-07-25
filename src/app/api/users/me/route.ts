@@ -7,6 +7,7 @@ connect();
 
 export async function GET(request:NextRequest){
     try {
+        const reqBoody=request.json();
         const data=await getDataFromToken(request);
         console.log(data);
         const user=await User.findOne({_id:data}).select('-password');
