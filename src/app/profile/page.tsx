@@ -13,6 +13,7 @@ export default function ProfilePage(){
     const [data,setData]=useState('nothing');
     const onLogout=async()=>{
         try {
+            console.log('hi');
             await axios.get('/api/users/logout');
             router.push('/login');
         } catch (error:any) {
