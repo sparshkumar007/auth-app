@@ -6,7 +6,7 @@ connect();
 
 export async function POST(request:NextRequest){
     try {
-        const reqBody=request.json();
+        const reqBody:any=request.json();
         const {token}=reqBody;
 
         const user=await User.findById({
