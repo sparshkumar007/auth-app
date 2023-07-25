@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
     // if user going to login/signup page even if he have token(means he is authorized or logged in)
     if(isGoingToSignUpOrLogin&&token)
     {
-        return NextResponse.redirect(new URL('/',request.nextUrl));
+        return NextResponse.redirect(new URL('/profile',request.nextUrl));
     }
 
     // if user is not autherized(no token) and he is going elsewhere than signup/login then redirect him back to login
