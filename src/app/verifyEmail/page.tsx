@@ -5,12 +5,12 @@ import { NextRequest,NextResponse } from "next/server";
 import React, { useEffect, useState } from 'react';
 import {useRouter} from "next/navigation";
 
-export default function VerifyEmail(request:NextRequest){
+export const VerifyEmail=()=>{
     const Router=useRouter();
     const [token,setToken]=useState("");
     const [verified,setVerified]=useState(false);
 
-    const verifyEmail=async ()=>{
+    const verifyEmails=async ()=>{
         try {
             const checked:any =await axios.post('/api/users/verifyuser',token);
             if(checked.success)
@@ -30,7 +30,7 @@ export default function VerifyEmail(request:NextRequest){
         setToken(obtainedToken||'');
     },[]);
     useEffect(()=>{
-        verifyEmail();
+        verifyEmails();
     },[token])
 
     return(
