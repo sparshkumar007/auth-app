@@ -6,7 +6,7 @@ import { NextRequest } from 'next/server'
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
     const path=request.nextUrl.pathname;
-    const isGoingToSignUpOrLogin=path=='/login'||path=='/signup';
+    const isGoingToSignUpOrLogin=path==='/login'||path==='/signup';
     const token=request.cookies.get('token')?.value||'';
 
     // if user going to login/signup page even if he have token(means he is authorized or logged in)
