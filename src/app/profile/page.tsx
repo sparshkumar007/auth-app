@@ -32,7 +32,7 @@ export default function ProfilePage(){
             // because user.data has an object we returned from me/router
             // {message:"",data:""}
             // so we now access data._id of this object
-            setData(user._id);
+            setData(user.data._id);
         } catch (error:any) {
             console.log(error.message);
         }

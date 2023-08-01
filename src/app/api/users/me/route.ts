@@ -15,7 +15,7 @@ export async function GET(request:NextRequest){
         //     message:"User data obtained!!",
         //     data:user
         // }
-        return NextResponse.json(user.data);
+        return NextResponse.json(user);
     } catch (error:any) {
         console.log(error.message);
         return NextResponse.json(error.message);
